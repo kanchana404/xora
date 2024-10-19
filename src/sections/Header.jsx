@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // Import prop-types
 import clsx from "clsx";
 import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
@@ -7,6 +8,11 @@ const NavLink = ({ title }) => (
     {title}
   </LinkScroll>
 );
+
+// Add PropTypes validation for NavLink
+NavLink.propTypes = {
+  title: PropTypes.string.isRequired, // Validate 'title' prop as a required string
+};
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

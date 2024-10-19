@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // Import prop-types
 import clsx from "clsx";
 import { useState } from "react";
 import { SlideDown } from "react-slidedown";
@@ -59,4 +60,15 @@ const FaqItem = ({ item, index }) => {
     </div>
   );
 };
+
+// Add PropTypes validation
+FaqItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,       // Assuming 'id' is a number
+    question: PropTypes.string.isRequired, // 'question' must be a string
+    answer: PropTypes.string.isRequired    // 'answer' must be a string
+  }).isRequired,
+  index: PropTypes.number.isRequired // 'index' must be a number
+};
+
 export default FaqItem;
