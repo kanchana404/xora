@@ -9,9 +9,12 @@ const App = () => {
       <Header />
       <Hero />
       <Features />
+<<<<<<< HEAD
       <Pricing />
+=======
+>>>>>>> main
     </main>
-  )
+  );
 };
 
 export default App;
